@@ -8,11 +8,13 @@ first GitHub.io page
 
    Though you can do it but
    now
+
+that is all
    - one
    - two
    - three
 
-..code:: python
+.. code-block:: python
 
     import os
     os.getcwd()
