@@ -18,6 +18,10 @@ that is all
 
     import os
     os.getcwd()
+    def set():
+       if name:
+          print("name")
+       return
     return os
 
 
