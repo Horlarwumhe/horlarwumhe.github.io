@@ -1,0 +1,18 @@
+{
+  "rants": [
+    {
+      "title": "Your code is *crap*.",
+      "excerpt": "I'm not even going to start talking about how broken this is. It's not just wrong—it's actively malicious in how it tries to hide the fact that it doesn't work.",
+      "date": "2012-12-20T14:35:00Z",
+      "url": "https://lore.kernel.org/lkml/CA+55aFz9KvJ8aXzYq1vZ2rQmNkL3aEjJ@example.com/",
+      "tags": ["drivers", "code-quality"]
+    },
+    {
+      "title": "This is pure garbage.",
+      "excerpt": "The whole patch is completely idiotic. I don't know what drugs you were on when you wrote this, but please stop. This kind of crap has no place in the kernel.",
+      "date": "2013-07-15T09:22:00Z",
+      "url": "https://lore.kernel.org/lkml/CA+55aFw1XyZ9BbNqR2kLmO@example.com/",
+      "tags": ["api", "maintainers"]
+    }
+  ]
+}

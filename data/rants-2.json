@@ -1,0 +1,25 @@
+{
+  "rants": [
+    {
+      "title": "Get rid of your stupid abstractions.",
+      "excerpt": "I really don’t understand why people keep doing this. If you need to explain your abstraction layer, it’s already wrong. The kernel is not a university project.",
+      "date": "2015-03-10T16:48:00Z",
+      "url": "https://lore.kernel.org/lkml/CA+55aFzABC123@example.com/",
+      "tags": ["code-style", "abstraction"]
+    },
+    {
+      "title": "No, we don’t do that kind of clever crap.",
+      "excerpt": "Clever code is bad code. We want simple, readable, and obviously correct code—not something that makes you feel smart for writing it.",
+      "date": "2018-09-22T11:05:00Z",
+      "url": "https://lore.kernel.org/lkml/CAHk-=wgM8nRvLx@example.com/",
+      "tags": ["git", "philosophy"]
+    },
+    {
+      "title": "If you break user space, you *will* hear from me.",
+      "excerpt": "We do *not* break user space. Ever. Not for 'cleanliness', not for 'design', not for any reason. If your patch breaks user space, it gets reverted—no discussion.",
+      "date": "2020-01-17T08:30:00Z",
+      "url": "https://lore.kernel.org/lkml/CA+55aFyXvB@example.com/",
+      "tags": ["api", "user-space", "stability"]
+    }
+  ]
+}
