@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Linus Rants • Unfiltered Wisdom from the Kernel</title>
+  <link rel="alternate" type="application/rss+xml" title="Linus Rants RSS" href="/rss.xml" />
+  <style>
+    :root {
+      --fg: #111;
+      --bg: #fff;
+      --light-gray: #888;
+      --border: #eee;
+      --link: #0066cc;
+/*      --spotlight-bg: #fff8e1;*/
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--fg);
+/*      background: var(--bg);*/
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .tagline {
+      color: var(--light-gray);
+      font-style: italic;
+      margin-bottom: 1.25rem;
+    }
+    .search-box {
+      margin: 1rem 0;
+    }
+    #rant-search {
+      width: 100%;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .tag-cloud {
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .tag-cloud a {
+      display: inline-block;
+      margin: 0 0.5rem 0.5rem 0;
+      padding: 0.25rem 0.75rem;
+      background: #f5f5f5;
+      border-radius: 20px;
+      text-decoration: none;
+      color: var(--link);
+    }
+    .tag-cloud a:hover {
+      background: #e9e9e9;
+    }
+    .spotlight {
+/*      background: var(--spotlight-bg);*/
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2.5rem;
+      border-left: 4px solid #ff9800;
+    }
+    .spotlight h2 {
+      margin-bottom: 1rem;
+      color: #d84315;
+      font-size: 1.4rem;
+    }
+    .rant-card {
+      margin-bottom: 2.25rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .rant-title {
+      font-size: 1.35rem;
+      margin: 0 0 0.6rem;
+      color: var(--fg);
+    }
+    .rant-excerpt {
+      color: #333;
+      margin-bottom: 0.75rem;
+    }
+    .rant-tags {
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      color: var(--light-gray);
+    }
+    .rant-tags span {
+      background: #f0f0f0;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      margin-right: 0.35rem;
+    }
+    .rant-meta {
+      font-size: 0.85rem;
+      color: var(--light-gray);
+    }
+    .source-link {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .source-link:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--light-gray);
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fg: #eee;
+        --bg: #121212;
+        --border: #333;
+        --light-gray: #aaa;
+        --spotlight-bg: #2a2516;
+      }
+      #rant-search {
+/*        background: #1e1e1e;*/
+        color: #eee;
+        border-color: #444;
+      }
+      .tag-cloud a {
+/*        background: #2a2a2a;*/
+        color: #64b5f6;
+      }
+      .tag-cloud a:hover {
+        background: #333;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Linus Rants</h1>
+    <p class="tagline">Unfiltered wisdom, sharp critiques, and legendary outbursts from Linus Torvalds on the Linux Kernel Mailing List.</p>
+
+    <div class="search-box">
+      <input type="text" id="rant-search" placeholder="Search rants (e.g. 'crap', 'maintainer', 'git')…" aria-label="Search rants">
+    </div>
+
+    <div class="tag-cloud">
+      <a href="?tag=git">#git</a>
+      <a href="?tag=drivers">#drivers</a>
+      <a href="?tag=code-style">#code-style</a>
+      <a href="?tag=maintainers">#maintainers</a>
+      <a href="?tag=security">#security</a>
+      <a href="?tag=api">#api</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Rant of the Week -->
+    <section class="spotlight">
+      <h2>🔥 Rant of the Week</h2>
+      <article class="rant-card spotlight-card">
+        <h3 class="rant-title">“If I ever meet you in person, I <em>will</em> headbutt you.”</h3>
+        <p class="rant-excerpt">"Your commit message is a novel written in emoji and passive-aggressive metaphors. This is kernel code, not your diary."</p>
+        <div class="rant-tags">
+          <span>#commit-messages</span>
+          <span>#maintainers</span>
+        </div>
+        <div class="rant-meta">
+          <time datetime="2025-11-18">November 18, 2025</time> • 
+          <a class="source-link" href="https://lore.kernel.org/lkml/CA+55aFzABC123@example.com/" target="_blank" rel="noopener">View original message</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Regular Rants -->
+    <article class="rant-card" data-tags="git code-style">
+      <h3 class="rant-title">“This is not just bad—it’s <em>actively malicious</em>”</h3>
+      <p class="rant-excerpt">"I really don’t understand what these ‘software architects’ think they are doing... If you have to explain your ‘abstraction’, it’s already wrong."</p>
+      <div class="rant-tags">
+        <span>#git</span>
+        <span>#code-style</span>
+      </div>
+      <div class="rant-meta">
+        <time datetime="2023-05-12">May 12, 2023</time> • 
+        <a class="source-link" href="https://lore.kernel.org/lkml/CA+55aFz9KvJ8aXzYq1vZ2rQmNkL3aEjJ@example.com/" target="_blank" rel="noopener">View original message</a>
+      </div>
+    </article>
+
+    <article class="rant-card" data-tags="drivers api">
+      <h3 class="rant-title">“Your code is crap. Not ‘needs improvement’—actual crap.”</h3>
+      <p class="rant-excerpt">"I’m tired of these half-baked patches that look like they were written by someone who’s never seen C before. Please, just... no."</p>
+      <div class="rant-tags">
+        <span>#drivers</span>
+        <span>#api</span>
+      </div>
+      <div class="rant-meta">
+        <time datetime="2022-11-03">November 3, 2022</time> • 
+        <a class="source-link" href="https://lore.kernel.org/lkml/CA+55aFw1XyZ9BbNqR2kLmO@example.com/" target="_blank" rel="noopener">View original message</a>
+      </div>
+    </article>
+
+    <!-- Add more rant cards as needed -->
+  </main>
+
+  <footer>
+    <p>
+      Not affiliated with Linus Torvalds or The Linux Foundation.<br>
+      All rants sourced from the public <a href="https://lore.kernel.org/lkml/" target="_blank" rel="noopener">Linux Kernel Mailing List</a>.
+      <br>
+      <a href="/rss.xml">Subscribe via RSS</a>
+      <p> Designed by <a href="https://qwen.ai"> Qwen AI </a> <p>
+    </p>
+  </footer>
+
+  <!-- Lightweight client-side search (optional enhancement) -->
+  <script>
+    document.getElementById('rant-search').addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase();
+      const cards = document.querySelectorAll('.rant-card:not(.spotlight-card)');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const tags = card.getAttribute('data-tags') || '';
+        if (text.includes(query) || tags.includes(query)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
